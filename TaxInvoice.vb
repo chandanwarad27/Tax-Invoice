@@ -59,11 +59,8 @@ Public Class TaxInvoice
                     reader = conn.GetConnection(query)
                     conn.reader.Close()
 
-                    If conn.cmd.ExecuteNonQuery > 0 Then
                         MessageBox.Show("Data saved successfully", "Successfull !")
-                    Else
-                        MessageBox.Show("Data not saved", "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End If
+
                 End If
             Catch ex As Exception
                 MsgBox(ex.Message)
